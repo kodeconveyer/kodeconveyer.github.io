@@ -1,0 +1,48 @@
+footer {
+  height: calc((#{$footer-height} / 5) * 4);
+  width: 100%;
+  border-top: $footer-border solid $other-color-1;
+  padding-top: calc(#{$footer-height} / 5);
+  color: $other-color-2;
+
+  .copyright, .pages, .languages {
+    line-height: 1.5;
+  }
+
+  .copyright, .pages {
+    float: left;
+  }
+
+  .pages {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+  }
+
+  .languages {
+    float: right;
+  }
+
+
+  @media(max-width: 925px) {
+    .pages, .copyright, .languages {
+      float: none;
+      text-align: center;
+    }
+
+    .pages {
+      position: initial;
+      transform: none;
+      left: 0;
+    }
+  }
+
+  a {
+    color: $other-color-2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

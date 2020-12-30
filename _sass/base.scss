@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding-top: $header-height + $body-padding;
+  padding-right: $body-padding;
+  padding-left: $body-padding;
+  font-family: $base-font;
+  background-color: $secondary-color;
+  color: $other-color-2;
+}
+
+.legal-notice, .privacy {
+  h1 {
+    margin: 0 0 5px;
+  }
+
+  h2 {
+    margin: 0 0 10px;
+  }
+
+  p {
+    margin: 0 0 15px;
+
+    &.new_section {
+      margin-bottom: 25px;
+    }
+  }
+}

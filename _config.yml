@@ -1,1 +1,23 @@
-theme: jekyll-theme-minimal
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-multiple-languages-plugin
+#  - jekyll-paginate-v2
+  # - jekyll-sitemap
+
+languages: ["en", "de", "ru"]
+exclude_from_localizations: ["css", "robots.txt", "404.md"]
+baseurl: ""
+
+languages_list:
+  en: English
+  de: Deutsch
+  ru: Русский
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"

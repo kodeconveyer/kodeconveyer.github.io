@@ -1,0 +1,10 @@
+common:
+  language: Язык
+  name: KoDe
+  keywords: Программное обеспечение, Разработка, Программирование
+
+pages:
+  blog: Home
+  legal_notice: Правовая Информация
+  privacy: Конфиденциальность
+  projects: Проекты

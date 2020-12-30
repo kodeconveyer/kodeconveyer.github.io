@@ -1,0 +1,14 @@
+:not(.not-found) > * > main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  p {
+    text-align: justify;
+    line-height: 1.5;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+  }
+}

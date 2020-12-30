@@ -1,0 +1,10 @@
+common:
+  language: Sprache
+  name: KoDe
+  keywords: Programme, Entwicklung, Programmierung
+
+pages:
+  blog: Home
+  legal_notice: Impressum
+  privacy: Datenschutz
+  projects: Projekte
