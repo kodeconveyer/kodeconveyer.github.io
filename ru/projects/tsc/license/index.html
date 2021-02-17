@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" prefix="og: http://ogp.me/ns#">
+<head>
+  <title>Traffic Sign Classifier • KoDe</title>
+<meta name="author" content="KoDe">
+<meta charset="UTF-8">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/kode.png">
+<meta name="theme-color" content="#525252">
+<meta name="viewport" content="initial-scale=1">
+<link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
+<meta http-equiv="Content-Language" content="ru">
+
+<link rel="alternate" i18n="en" href="/projects/tsc/license/" />
+
+<link rel="alternate" i18n="de" href="/de/projects/tsc/license/" />
+
+<link rel="alternate" i18n="ru" href="/ru/projects/tsc/license/" />
+
+
+</head>
+<body>
+  <header>
+  <a href="/ru/" class="logo-link" title='Logo'>
+  <div class="logo-wrapper">
+    
+    <svg
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    width="533.33331"
+    height="533.33331"
+    viewBox="0 0 500.00001 500.00001"
+    id="svg2"
+    version="1.1"
+    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+    sodipodi:docname="ACSlab_v1.svg"
+    inkscape:export-filename="/home/dstumm/Downloads/ACSlab_v2.png"
+    inkscape:export-xdpi="184.32001"
+    inkscape:export-ydpi="184.32001">
+   <defs
+      id="defs4">
+     <marker
+        style="overflow:visible"
+        id="Arrow1Lstart"
+        refX="0.0"
+        refY="0.0"
+        orient="auto"
+        inkscape:stockid="Arrow1Lstart"
+        inkscape:isstock="true">
+       <path
+          transform="scale(0.8) translate(12.5,0)"
+          style="fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:0;fill:#ffffff;fill-opacity:1"
+          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+          id="path842" />
+     </marker>
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9850"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-0"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-3"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-5"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-1"
+        is_visible="true" />
+   </defs>
+   <sodipodi:namedview
+      id="base"
+      pagecolor="#ffffff"
+      bordercolor="#ffffff"
+      borderopacity="1"
+      inkscape:pageopacity="1"
+      inkscape:pageshadow="2"
+      inkscape:zoom="2.56"
+      inkscape:cx="234.68401"
+      inkscape:cy="530.77907"
+      inkscape:document-units="px"
+      inkscape:current-layer="layer1"
+      showgrid="true"
+      units="px"
+      showborder="false"
+      showguides="false"
+      borderlayer="false"
+      inkscape:window-width="1920"
+      inkscape:window-height="1025"
+      inkscape:window-x="0"
+      inkscape:window-y="0"
+      inkscape:window-maximized="1"
+      inkscape:document-rotation="0"
+      inkscape:pagecheckerboard="true"
+      inkscape:showpageshadow="false">
+     <inkscape:grid
+        type="xygrid"
+        id="grid8086"
+        originx="0"
+        originy="0"
+        spacingx="1"
+        spacingy="1" />
+   </sodipodi:namedview>
+   <metadata
+      id="metadata7">
+     <rdf:RDF>
+       <cc:Work
+          rdf:about="">
+         <dc:format>image/svg+xml</dc:format>
+         <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+         <dc:title></dc:title>
+       </cc:Work>
+     </rdf:RDF>
+   </metadata>
+   <g
+      inkscape:label="Ebene 1"
+      inkscape:groupmode="layer"
+      id="layer1"
+      transform="translate(0,-552.36216)">
+     <ellipse
+        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;marker-start:url(#Arrow1Lstart)"
+        id="path8082"
+        cx="249.99998"
+        cy="802.36218"
+        rx="249.99187"
+        ry="249.99188" />
+   </g>
+   <g
+      inkscape:groupmode="layer"
+      id="layer2"
+      inkscape:label="Ebene 2">
+     <rect
+        style="fill:#005c91;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.890439;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        id="rect8092"
+        width="30.000938"
+        height="370"
+        x="234.99951"
+        y="65.000008" />
+     <path
+        style="fill:none;fill-rule:evenodd;stroke:#005c91;stroke-width:30.0009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        d="m 210,80.00001 h -30 c -12.35886,0 -24.85841,0.228812 -36.80837,3.381533 -11.94997,3.152721 -23.18968,9.237325 -31.92298,17.982077 -8.7333,8.74476 -14.838004,19.95369 -18.134901,31.86469 -3.296897,11.91099 -3.889028,24.43594 -3.133749,36.7717 0.698463,11.4078 2.556469,22.82942 6.662537,33.49553 4.106073,10.66612 10.534043,20.5017 19.072203,28.09943 8.53816,7.59774 19.08485,12.80842 30.19013,15.50999 11.10528,2.70157 22.64597,2.89505 34.07513,2.89505 h 30"
+        id="path9852"
+        inkscape:path-effect="#path-effect9854"
+        inkscape:original-d="m 210,80.00001 h -30 c -5,0 -91.24622,47.5919 -90,90 1.17902,40.12133 80,80 90,80 h 30"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="csasc" />
+     <path
+        style="fill:none;fill-rule:evenodd;stroke:#005c91;stroke-width:30.0009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        d="m 290,250.00001 h 30.00003 c 12.35886,0 24.85842,0.22881 36.80839,3.38153 11.94997,3.15272 23.18968,9.23732 31.923,17.98207 8.73331,8.74475 14.83803,19.95369 18.13493,31.86468 3.29691,11.911 3.88905,24.43596 3.13377,36.77172 -0.69846,11.40781 -2.55648,22.82943 -6.66256,33.49554 -4.10607,10.66612 -10.53406,20.5017 -19.07223,28.09943 -8.53817,7.59774 -19.08486,12.80841 -30.19015,15.50998 -11.10529,2.70157 -22.64598,2.89505 -34.07515,2.89505 H 290"
+        id="path9852-8"
+        inkscape:path-effect="#path-effect9854-1"
+        inkscape:original-d="m 290,250.00001 h 30.00003 c 5,0 91.24631,47.5919 90.00009,90 -1.17902,40.12133 -80.00008,80 -90.00009,80 H 290"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="csasc" />
+   </g>
+ </svg>
+    
+    <svg
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    width="533.33331"
+    height="533.33331"
+    viewBox="0 0 500.00001 500.00001"
+    id="svg2"
+    version="1.1"
+    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+    sodipodi:docname="ACSlab_v1.svg"
+    inkscape:export-filename="/home/dstumm/Downloads/ACSlab_v2.png"
+    inkscape:export-xdpi="184.32001"
+    inkscape:export-ydpi="184.32001">
+   <defs
+      id="defs4">
+     <marker
+        style="overflow:visible"
+        id="Arrow1Lstart"
+        refX="0.0"
+        refY="0.0"
+        orient="auto"
+        inkscape:stockid="Arrow1Lstart"
+        inkscape:isstock="true">
+       <path
+          transform="scale(0.8) translate(12.5,0)"
+          style="fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:0;fill:#ffffff;fill-opacity:1"
+          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+          id="path842" />
+     </marker>
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9850"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-0"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-3"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-5"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-1"
+        is_visible="true" />
+   </defs>
+   <sodipodi:namedview
+      id="base"
+      pagecolor="#ffffff"
+      bordercolor="#ffffff"
+      borderopacity="1"
+      inkscape:pageopacity="1"
+      inkscape:pageshadow="2"
+      inkscape:zoom="2.56"
+      inkscape:cx="234.68401"
+      inkscape:cy="530.77907"
+      inkscape:document-units="px"
+      inkscape:current-layer="layer1"
+      showgrid="true"
+      units="px"
+      showborder="false"
+      showguides="false"
+      borderlayer="false"
+      inkscape:window-width="1920"
+      inkscape:window-height="1025"
+      inkscape:window-x="0"
+      inkscape:window-y="0"
+      inkscape:window-maximized="1"
+      inkscape:document-rotation="0"
+      inkscape:pagecheckerboard="true"
+      inkscape:showpageshadow="false">
+     <inkscape:grid
+        type="xygrid"
+        id="grid8086"
+        originx="0"
+        originy="0"
+        spacingx="1"
+        spacingy="1" />
+   </sodipodi:namedview>
+   <metadata
+      id="metadata7">
+     <rdf:RDF>
+       <cc:Work
+          rdf:about="">
+         <dc:format>image/svg+xml</dc:format>
+         <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+         <dc:title></dc:title>
+       </cc:Work>
+     </rdf:RDF>
+   </metadata>
+   <g
+      inkscape:label="Ebene 1"
+      inkscape:groupmode="layer"
+      id="layer1"
+      transform="translate(0,-552.36216)">
+     <ellipse
+        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;marker-start:url(#Arrow1Lstart)"
+        id="path8082"
+        cx="249.99998"
+        cy="802.36218"
+        rx="249.99187"
+        ry="249.99188" />
+   </g>
+   <g
+      inkscape:groupmode="layer"
+      id="layer2"
+      inkscape:label="Ebene 2">
+     <rect
+        style="fill:#005c91;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.890439;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        id="rect8092"
+        width="30.000938"
+        height="370"
+        x="234.99951"
+        y="65.000008" />
+     <path
+        style="fill:none;fill-rule:evenodd;stroke:#005c91;stroke-width:30.0009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        d="m 210,80.00001 h -30 c -12.35886,0 -24.85841,0.228812 -36.80837,3.381533 -11.94997,3.152721 -23.18968,9.237325 -31.92298,17.982077 -8.7333,8.74476 -14.838004,19.95369 -18.134901,31.86469 -3.296897,11.91099 -3.889028,24.43594 -3.133749,36.7717 0.698463,11.4078 2.556469,22.82942 6.662537,33.49553 4.106073,10.66612 10.534043,20.5017 19.072203,28.09943 8.53816,7.59774 19.08485,12.80842 30.19013,15.50999 11.10528,2.70157 22.64597,2.89505 34.07513,2.89505 h 30"
+        id="path9852"
+        inkscape:path-effect="#path-effect9854"
+        inkscape:original-d="m 210,80.00001 h -30 c -5,0 -91.24622,47.5919 -90,90 1.17902,40.12133 80,80 90,80 h 30"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="csasc" />
+     <path
+        style="fill:none;fill-rule:evenodd;stroke:#005c91;stroke-width:30.0009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        d="m 290,250.00001 h 30.00003 c 12.35886,0 24.85842,0.22881 36.80839,3.38153 11.94997,3.15272 23.18968,9.23732 31.923,17.98207 8.73331,8.74475 14.83803,19.95369 18.13493,31.86468 3.29691,11.911 3.88905,24.43596 3.13377,36.77172 -0.69846,11.40781 -2.55648,22.82943 -6.66256,33.49554 -4.10607,10.66612 -10.53406,20.5017 -19.07223,28.09943 -8.53817,7.59774 -19.08486,12.80841 -30.19015,15.50998 -11.10529,2.70157 -22.64598,2.89505 -34.07515,2.89505 H 290"
+        id="path9852-8"
+        inkscape:path-effect="#path-effect9854-1"
+        inkscape:original-d="m 290,250.00001 h 30.00003 c 5,0 91.24631,47.5919 90.00009,90 -1.17902,40.12133 -80.00008,80 -90.00009,80 H 290"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="csasc" />
+   </g>
+ </svg>
+    
+    <svg
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    width="533.33331"
+    height="533.33331"
+    viewBox="0 0 500.00001 500.00001"
+    id="svg2"
+    version="1.1"
+    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+    sodipodi:docname="ACSlab_v1.svg"
+    inkscape:export-filename="/home/dstumm/Downloads/ACSlab_v2.png"
+    inkscape:export-xdpi="184.32001"
+    inkscape:export-ydpi="184.32001">
+   <defs
+      id="defs4">
+     <marker
+        style="overflow:visible"
+        id="Arrow1Lstart"
+        refX="0.0"
+        refY="0.0"
+        orient="auto"
+        inkscape:stockid="Arrow1Lstart"
+        inkscape:isstock="true">
+       <path
+          transform="scale(0.8) translate(12.5,0)"
+          style="fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:0;fill:#ffffff;fill-opacity:1"
+          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+          id="path842" />
+     </marker>
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9850"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-0"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-3"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-5"
+        is_visible="true" />
+     <inkscape:path-effect
+        effect="spiro"
+        id="path-effect9854-1"
+        is_visible="true" />
+   </defs>
+   <sodipodi:namedview
+      id="base"
+      pagecolor="#ffffff"
+      bordercolor="#ffffff"
+      borderopacity="1"
+      inkscape:pageopacity="1"
+      inkscape:pageshadow="2"
+      inkscape:zoom="2.56"
+      inkscape:cx="234.68401"
+      inkscape:cy="530.77907"
+      inkscape:document-units="px"
+      inkscape:current-layer="layer1"
+      showgrid="true"
+      units="px"
+      showborder="false"
+      showguides="false"
+      borderlayer="false"
+      inkscape:window-width="1920"
+      inkscape:window-height="1025"
+      inkscape:window-x="0"
+      inkscape:window-y="0"
+      inkscape:window-maximized="1"
+      inkscape:document-rotation="0"
+      inkscape:pagecheckerboard="true"
+      inkscape:showpageshadow="false">
+     <inkscape:grid
+        type="xygrid"
+        id="grid8086"
+        originx="0"
+        originy="0"
+        spacingx="1"
+        spacingy="1" />
+   </sodipodi:namedview>
+   <metadata
+      id="metadata7">
+     <rdf:RDF>
+       <cc:Work
+          rdf:about="">
+         <dc:format>image/svg+xml</dc:format>
+         <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+         <dc:title></dc:title>
+       </cc:Work>
+     </rdf:RDF>
+   </metadata>
+   <g
+      inkscape:label="Ebene 1"
+      inkscape:groupmode="layer"
+      id="layer1"
+      transform="translate(0,-552.36216)">
+     <ellipse
+        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;marker-start:url(#Arrow1Lstart)"
+        id="path8082"
+        cx="249.99998"
+        cy="802.36218"
+        rx="249.99187"
+        ry="249.99188" />
+   </g>
+   <g
+      inkscape:groupmode="layer"
+      id="layer2"
+      inkscape:label="Ebene 2">
+     <rect
+        style="fill:#005c91;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.890439;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        id="rect8092"
+        width="30.000938"
+        height="370"
+        x="234.99951"
+        y="65.000008" />
+     <path
+        style="fill:none;fill-rule:evenodd;stroke:#005c91;stroke-width:30.0009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        d="m 210,80.00001 h -30 c -12.35886,0 -24.85841,0.228812 -36.80837,3.381533 -11.94997,3.152721 -23.18968,9.237325 -31.92298,17.982077 -8.7333,8.74476 -14.838004,19.95369 -18.134901,31.86469 -3.296897,11.91099 -3.889028,24.43594 -3.133749,36.7717 0.698463,11.4078 2.556469,22.82942 6.662537,33.49553 4.106073,10.66612 10.534043,20.5017 19.072203,28.09943 8.53816,7.59774 19.08485,12.80842 30.19013,15.50999 11.10528,2.70157 22.64597,2.89505 34.07513,2.89505 h 30"
+        id="path9852"
+        inkscape:path-effect="#path-effect9854"
+        inkscape:original-d="m 210,80.00001 h -30 c -5,0 -91.24622,47.5919 -90,90 1.17902,40.12133 80,80 90,80 h 30"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="csasc" />
+     <path
+        style="fill:none;fill-rule:evenodd;stroke:#005c91;stroke-width:30.0009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+        d="m 290,250.00001 h 30.00003 c 12.35886,0 24.85842,0.22881 36.80839,3.38153 11.94997,3.15272 23.18968,9.23732 31.923,17.98207 8.73331,8.74475 14.83803,19.95369 18.13493,31.86468 3.29691,11.911 3.88905,24.43596 3.13377,36.77172 -0.69846,11.40781 -2.55648,22.82943 -6.66256,33.49554 -4.10607,10.66612 -10.53406,20.5017 -19.07223,28.09943 -8.53817,7.59774 -19.08486,12.80841 -30.19015,15.50998 -11.10529,2.70157 -22.64598,2.89505 -34.07515,2.89505 H 290"
+        id="path9852-8"
+        inkscape:path-effect="#path-effect9854-1"
+        inkscape:original-d="m 290,250.00001 h 30.00003 c 5,0 91.24631,47.5919 90.00009,90 -1.17902,40.12133 -80.00008,80 -90.00009,80 H 290"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="csasc" />
+   </g>
+ </svg>
+    
+  </div>
+</a>
+
+  <nav id="mainNav">
+    <a href="/ru/" class="">
+      /
+    </a>
+    <a href="/ru/projects" class="">
+      Проекты
+    </a>
+    <a href="javascript:void(0);" onclick="toggleNavMenu()" class="expand-menu-icon">&#9776;</a>
+  </nav>
+</header>
+
+
+<script>
+  function toggleNavMenu() {
+    var x = document.getElementById("mainNav");
+    if (x.className === "responsive-visible") {
+      x.className = "";
+    } else {
+      x.className = "responsive-visible";
+    }
+  }
+</script>
+
+  <main class="license">
+  <h1 id="источники">Источники</h1>
+
+<ul>
+  <li><a href="https://de.wikipedia.org/wiki/Bildtafel_der_Verkehrszeichen_in_der_Bundesrepublik_Deutschland_seit_2017">https://de.wikipedia.org/wiki/Bildtafel_der_Verkehrszeichen_in_der_Bundesrepublik_Deutschland_seit_2017</a></li>
+  <li><a href="http://www.gesetze-im-internet.de/stvo_2013/index.html#BJNR036710013BJNE006100000">http://www.gesetze-im-internet.de/stvo_2013/index.html#BJNR036710013BJNE006100000</a></li>
+</ul>
+
+<h1 id="специальная-благодарность">Специальная благодарность</h1>
+
+<ul>
+  <li><a href="https://github.com/AlexeyAB/darknet">AlexeyAB</a></li>
+</ul>
+
+<h1 id="лицензии">Лицензии</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>play-services-ads-identifier</td>
+      <td>com.google.android.gms:play-services-ads-identifier:17.0.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>Android Arch-Runtime</td>
+      <td>androidx.arch.core:core-runtime:2.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Sliding Pane Layout</td>
+      <td>androidx.slidingpanelayout:slidingpanelayout:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Core Kotlin Extensions</td>
+      <td>androidx.core:core-ktx:1.3.2</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>FindBugs-jsr305</td>
+      <td>com.google.code.findbugs:jsr305:2.0.1</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Checker Qual</td>
+      <td>org.checkerframework:checker-qual:2.5.8</td>
+      <td><a href="https://spdx.org/licenses/MIT.html">MIT</a></td>
+    </tr>
+    <tr>
+      <td>Hamcrest Core</td>
+      <td>org.hamcrest:hamcrest-core:1.3</td>
+      <td><a href="https://spdx.org/licenses/BSD-3-Clause.html">BSD_3_Clause</a></td>
+    </tr>
+    <tr>
+      <td>AndroidX Futures</td>
+      <td>androidx.concurrent:concurrent-futures:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android ConstraintLayout Solver</td>
+      <td>androidx.constraintlayout:constraintlayout-solver:2.0.4</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android WorkManager Runtime</td>
+      <td>androidx.work:work-runtime:2.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support fragment</td>
+      <td>androidx.fragment:fragment:1.2.4</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Preferences KTX</td>
+      <td>androidx.preference:preference-ktx:1.1.1</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support core utils</td>
+      <td>androidx.legacy:legacy-support-core-utils:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle ViewModel Kotlin Extensions</td>
+      <td>androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Hamcrest library</td>
+      <td>org.hamcrest:hamcrest-library:1.3</td>
+      <td><a href="https://spdx.org/licenses/BSD-3-Clause.html">BSD_3_Clause</a></td>
+    </tr>
+    <tr>
+      <td>AndroidX Test Library</td>
+      <td>androidx.test.espresso:espresso-idling-resource:3.3.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Room-Common</td>
+      <td>androidx.room:room-common:2.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Kotlin Stdlib Common</td>
+      <td>org.jetbrains.kotlin:kotlin-stdlib-common:1.4.30</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support VectorDrawable</td>
+      <td>androidx.vectordrawable:vectordrawable:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Activity</td>
+      <td>androidx.activity:activity:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle ViewModel with SavedState</td>
+      <td>androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>AndroidX Test Library</td>
+      <td>androidx.test.ext:junit:1.1.2</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>JUnit</td>
+      <td>junit:junit:4.12</td>
+      <td><a href="https://spdx.org/licenses/EPL-1.0.html">EPL_1_0</a></td>
+    </tr>
+    <tr>
+      <td>Fragment Kotlin Extensions</td>
+      <td>androidx.fragment:fragment-ktx:1.2.4</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Experimental annotation</td>
+      <td>androidx.annotation:annotation-experimental:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Cursor Adapter</td>
+      <td>androidx.cursoradapter:cursoradapter:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>play-services-gass</td>
+      <td>com.google.android.gms:play-services-gass:19.7.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>TensorFlow Lite Support</td>
+      <td>org.tensorflow:tensorflow-lite-support:0.1.0-rc1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Support Custom View</td>
+      <td>androidx.swiperefreshlayout:swiperefreshlayout:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Jetpack Camera Library Camera2 Implementation/Extensions</td>
+      <td>androidx.camera:camera-camera2:1.1.0-alpha01</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android DB</td>
+      <td>androidx.sqlite:sqlite:2.0.1</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Custom View</td>
+      <td>androidx.customview:customview:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Annotations</td>
+      <td>androidx.annotation:annotation:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support View Pager</td>
+      <td>androidx.viewpager:viewpager:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Room-Runtime</td>
+      <td>androidx.room:room-runtime:2.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>javax.inject</td>
+      <td>javax.inject:javax.inject:1</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>AndroidX Test Library</td>
+      <td>androidx.test.espresso:espresso-core:3.3.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Arch-Common</td>
+      <td>androidx.arch.core:core-common:2.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle ViewModel</td>
+      <td>androidx.lifecycle:lifecycle-viewmodel:2.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle LiveData Core</td>
+      <td>androidx.lifecycle:lifecycle-livedata-core:2.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>AndroidX Test Library</td>
+      <td>androidx.test:monitor:1.3.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Interpolators</td>
+      <td>androidx.interpolator:interpolator:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>VersionedParcelable</td>
+      <td>androidx.versionedparcelable:versionedparcelable:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Local Broadcast Manager</td>
+      <td>androidx.localbroadcastmanager:localbroadcastmanager:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>AboutLibraries Library</td>
+      <td>com.mikepenz:aboutlibraries-core:8.8.2</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Coordinator Layout</td>
+      <td>androidx.coordinatorlayout:coordinatorlayout:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>LiveData Core Kotlin Extensions</td>
+      <td>androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support SQLite - Framework Implementation</td>
+      <td>androidx.sqlite:sqlite-framework:2.0.1</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>TensorFlow Lite</td>
+      <td>org.tensorflow:tensorflow-lite:2.2.0</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AndroidX Test Library</td>
+      <td>androidx.test:runner:1.3.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>play-services-ads</td>
+      <td>com.google.android.gms:play-services-ads:19.7.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>kotlinx-coroutines-core</td>
+      <td>org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Kotlin Stdlib Jdk7</td>
+      <td>org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.30</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Kotlin Stdlib Jdk8</td>
+      <td>org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.30</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>play-services-ads-lite</td>
+      <td>com.google.android.gms:play-services-ads-lite:19.7.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>Android Transition Support Library</td>
+      <td>androidx.transition:transition:1.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle-Common</td>
+      <td>androidx.lifecycle:lifecycle-common:2.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Drawer Layout</td>
+      <td>androidx.drawerlayout:drawerlayout:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>AutoValue Annotations</td>
+      <td>com.google.auto.value:auto-value-annotations:1.6.3</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Support collections</td>
+      <td>androidx.collection:collection:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>TensorFlow Lite GPU</td>
+      <td>org.tensorflow:tensorflow-lite-gpu:2.2.0</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Kotlin Stdlib</td>
+      <td>org.jetbrains.kotlin:kotlin-stdlib:1.4.30</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Guava ListenableFuture only</td>
+      <td>com.google.guava:listenablefuture:1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Jetpack Camera Lifecycle Library</td>
+      <td>androidx.camera:camera-lifecycle:1.1.0-alpha01</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support RecyclerView v7</td>
+      <td>androidx.recyclerview:recyclerview:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Custom Tabs</td>
+      <td>androidx.browser:browser:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>play-services-measurement-sdk-api</td>
+      <td>com.google.android.gms:play-services-measurement-sdk-api:17.5.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>TensorFlow Lite Metadata</td>
+      <td>org.tensorflow:tensorflow-lite-metadata:0.1.0-rc1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Activity Kotlin Extensions</td>
+      <td>androidx.activity:activity-ktx:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android ConstraintLayout</td>
+      <td>androidx.constraintlayout:constraintlayout:2.0.4</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Print</td>
+      <td>androidx.print:print:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle Service</td>
+      <td>androidx.lifecycle:lifecycle-service:2.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>AndroidX Preference</td>
+      <td>androidx.preference:preference:1.1.1</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support CardView v7</td>
+      <td>androidx.cardview:cardview:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>play-services-basement</td>
+      <td>com.google.android.gms:play-services-basement:17.6.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>Support core UI</td>
+      <td>androidx.legacy:legacy-support-core-ui:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Hamcrest Integration</td>
+      <td>org.hamcrest:hamcrest-integration:1.3</td>
+      <td><a href="https://spdx.org/licenses/BSD-3-Clause.html">BSD_3_Clause</a></td>
+    </tr>
+    <tr>
+      <td>Jetpack Camera View Library</td>
+      <td>androidx.camera:camera-view:1.0.0-alpha21</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support AnimatedVectorDrawable</td>
+      <td>androidx.vectordrawable:vectordrawable-animated:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>kotlinx-coroutines-android</td>
+      <td>org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle LiveData</td>
+      <td>androidx.lifecycle:lifecycle-livedata:2.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Activity</td>
+      <td>androidx.savedstate:savedstate:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support compat</td>
+      <td>androidx.core:core:1.3.2</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle Runtime</td>
+      <td>androidx.lifecycle:lifecycle-runtime:2.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>JavaWriter</td>
+      <td>com.squareup:javawriter:2.1.1</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Collections Kotlin Extensions</td>
+      <td>androidx.collection:collection-ktx:1.1.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support loader</td>
+      <td>androidx.loader:loader:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Jetpack Camera Core Library</td>
+      <td>androidx.camera:camera-core:1.1.0-alpha01</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Lifecycle Kotlin Extensions</td>
+      <td>androidx.lifecycle:lifecycle-runtime-ktx:2.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Document File</td>
+      <td>androidx.documentfile:documentfile:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android Resources Library</td>
+      <td>androidx.appcompat:appcompat-resources:1.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>play-services-measurement-base</td>
+      <td>com.google.android.gms:play-services-measurement-base:17.5.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>Support DynamicAnimation</td>
+      <td>androidx.dynamicanimation:dynamicanimation:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>play-services-ads-base</td>
+      <td>com.google.android.gms:play-services-ads-base:19.7.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>user-messaging-platform</td>
+      <td>com.google.android.ump:user-messaging-platform:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+    <tr>
+      <td>IntelliJ IDEA Annotations</td>
+      <td>org.jetbrains:annotations:13.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Material Components for Android</td>
+      <td>com.google.android.material:material:1.3.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>AndroidX Widget ViewPager2</td>
+      <td>androidx.viewpager2:viewpager2:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Support Async Layout Inflater</td>
+      <td>androidx.asynclayoutinflater:asynclayoutinflater:1.0.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>AndroidX Test Library</td>
+      <td>androidx.test:core:1.3.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>FlatBuffers Java API</td>
+      <td>com.google.flatbuffers:flatbuffers-java:1.12.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>Android AppCompat Library v7</td>
+      <td>androidx.appcompat:appcompat:1.2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">Apache_2_0</a></td>
+    </tr>
+    <tr>
+      <td>play-services-tasks</td>
+      <td>com.google.android.gms:play-services-tasks:17.2.1</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">ADSKL</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASDKL</td>
+      <td>Android Software Development Kit License</td>
+      <td><a href="https://spdx.org/licenses/ASDKL.html">https://spdx.org/licenses/ASDKL.html</a></td>
+    </tr>
+    <tr>
+      <td>Apache-2.0</td>
+      <td>Apache License 2.0</td>
+      <td><a href="https://spdx.org/licenses/Apache-2.0.html">https://spdx.org/licenses/Apache-2.0.html</a></td>
+    </tr>
+    <tr>
+      <td>EPL-1.0</td>
+      <td>Eclipse Public License 1.0</td>
+      <td><a href="https://spdx.org/licenses/EPL-1.0.html">https://spdx.org/licenses/EPL-1.0.html</a></td>
+    </tr>
+    <tr>
+      <td>BSD-3-Clause</td>
+      <td>BSD 3-Clause “New” or “Revised” License</td>
+      <td><a href="https://spdx.org/licenses/BSD-3-Clause.html">https://spdx.org/licenses/BSD-3-Clause.html</a></td>
+    </tr>
+    <tr>
+      <td>MIT</td>
+      <td>MIT License</td>
+      <td><a href="https://spdx.org/licenses/MIT.html">https://spdx.org/licenses/MIT.html</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</main>
+
+  <footer>
+  <div class="copyright">© KoDe, 2021</div>
+  <div class="pages">
+    <a href="/ru/legal_notice">Правовая Информация</a> |
+    <a href="/ru/privacy">Конфиденциальность</a>
+  </div>
+  <div class="languages">
+    Язык:
+    
+      <a href="/projects/tsc/license/">English</a> |
+    
+      <a href="/de/projects/tsc/license/">Deutsch</a> |
+    
+      <a href="/ru/projects/tsc/license/">Русский</a> |
+    
+  </div>
+</footer>
+
+</body>
+</html>
